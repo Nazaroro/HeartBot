@@ -37,7 +37,7 @@ client.once(Events.ClientReady, async () => {
     try {
         // ---- ДОДАЄМО /farm ----
         await rest.put(
-            Routes.applicationGuildCommands(client.user.id, '1473112469051412530'), // <-- встав свій ID сервера
+            Routes.applicationGuildCommands(client.user.id, '1443723630948257825'), // <-- встав свій ID сервера
             { body: commands }
         );
         console.log('Команда /farm додана ✅');
@@ -100,7 +100,7 @@ client.on(Events.InteractionCreate, async interaction => {
         }
 
         // Знаходимо форум-канал "id"
-        const forumChannel = await interaction.guild.channels.fetch('1473125424325459968');
+        const forumChannel = await interaction.guild.channels.fetch('1456813080582553875');
 
 if (!forumChannel || forumChannel.type !== ChannelType.GuildForum)
     return interaction.reply({ content: '❌ Форум-канал не знайдено або це не форум!', ephemeral: true });
